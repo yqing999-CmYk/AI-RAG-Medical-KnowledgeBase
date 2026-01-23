@@ -1,0 +1,17 @@
+[project]
+name = "ai-rag-knowbase" # Replace with your actual project name
+version = "0.1.0"       # Replace with your actual version
+description = "My AI RAG Knowledge Base Project" # Optional description
+requires-python = ">=3.12"
+dependencies = [
+    "chromadb>=0.5.0",
+    "google-genai>=1.59.0",
+    "lancedb>=0.26.1",
+    "pydantic-settings>=2.0.0",
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.uv.workspace]
