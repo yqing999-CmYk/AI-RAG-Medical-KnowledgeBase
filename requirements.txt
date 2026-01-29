@@ -1,0 +1,19 @@
+1, install uv. 
+Install uv by running pip install uv (or pipx install uv) for a quick setup, or use standalone installers: curl -LsSf https://astral.sh/uv/install.sh | sh (macOS/Linux) or powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex" (Windows). It works across macOS, Linux, and Windows, enabling fast Python project management. 
+
+2,install langchain.
+ pip install - U langchain
+
+
+3, uv add chromadb google-genai
+
+4, pip install pydantic-settings
+
+5, uv run chunk.py
+
+   uv venv --python 3.12
+   uv sync
+
+6, uv run enbed.py
+
+7, uv run streamlit run app.py
