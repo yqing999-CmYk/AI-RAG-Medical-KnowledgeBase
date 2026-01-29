@@ -51,7 +51,7 @@ if __name__ == '__main__':
     else:
         print(f"API key found: {api_key[:8]}...")
 
-    #create_db()
+    create_db()
 
     question = "Has some new method been proposed to treat childhood cancer?"
     chunks = query_db(question)
@@ -70,4 +70,5 @@ if __name__ == '__main__':
     # Print the actual text response, instead of the full response object print(result)
     print(result.text)
    
+
 
