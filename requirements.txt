@@ -1,19 +1,49 @@
-1, install uv. 
+
+
+1, pip install uv
+  ## passed at host server, with root acct at /home/yqing/AI-RAG-KnowBase/ 
+
 Install uv by running pip install uv (or pipx install uv) for a quick setup, or use standalone installers: curl -LsSf https://astral.sh/uv/install.sh | sh (macOS/Linux) or powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex" (Windows). It works across macOS, Linux, and Windows, enabling fast Python project management. 
 
-2,install langchain.
- pip install - U langchain
+install python 3.12 if not installed, you can use pyenv or any other Python version manager to install Python 3.12 on your system. For example, with pyenv, you can run pyenv install 3.12.0 to install Python 3.12.
+set the virtual environment to python 3.12 by running uv venv --python 3.12 in your project directory. This will create a virtual environment using Python 3.12 for your project. and activate the virtual environment by running uv shell. This will ensure that you are using the correct Python version and dependencies for your project.
 
+ sudo apt update && sudo apt upgrade -y
+   ## failed for yqing. but passed for root
 
-3, uv add chromadb google-genai
+ sudo apt install python3 python3-venv -y
+ sudo apt install python3 python3-pip     ?which one
+   ##
+
+ python3 -m venv myenv
+ source myenv/bin/activate
+
+ or, python3 -m venv .venv
+     source .venv/bin/activate
+
+ if want to deactivate, just: 
+  deactivate
+  rm -rf myenv             rm -rf .venv
+            
+
+2,pip install langchain
+ ## above passed.  failed:   pip install - U langchain   
+
+3, uv add chromadb google-genai      
+   ##-- failed at host Server ?
 
 4, pip install pydantic-settings
+   ## passed
 
-5, uv run chunk.py
+5, pip install streamlit
+   ## passed
+
+6, uv run chunk.py
+
 
    uv venv --python 3.12
    uv sync
 
-6, uv run enbed.py
+7, uv run enbed.py
 
-7, uv run streamlit run app.py
+8, uv run streamlit run app.py
